@@ -1,4 +1,5 @@
 
+import { sendPasswordResetEmail } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap'
 import { Form } from 'react-bootstrap';
@@ -6,6 +7,8 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const nevigate = useNavigate()
@@ -36,9 +39,6 @@ const Login = () => {
             setUserInfo({ ...userInfo, email: "" })
         }
 
-
-
-        // setEmail(e.target.value);
     }
     const handlePasswordClick = (e) => {
         const passwordRegex = /.{6,}/;
@@ -53,16 +53,6 @@ const Login = () => {
         }
 
     }
-
-    const handleLogin = (e) => {
-        e.preventDefault();
-
-        console.log(userInfo)
-
-        signInWithEmail(userInfo.email, userInfo.password);
-
-    }
-
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
@@ -72,6 +62,21 @@ const Login = () => {
             navigate(from);
         }
     }, [user]);
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+
+        console.log(userInfo)
+
+        signInWithEmail(userInfo.email, userInfo.password);
+
+    }
+    const handleResetPassword = () => {
+        sendPasswordResetEmail(auth, userInfo.email)
+            .then(() => {
+                toast('An mail is sent to your email for reset password request ')
+            })
+    }
 
     return (
         <div className='mx-auto container w-50 mt-5 log-in'>
@@ -91,7 +96,8 @@ const Login = () => {
                 </Button>
             </Form>
             <p>New to My site? <span style={{ cursor: "pointer" }} onClick={nevigateRegister} className='text-primary'>Please Sign Up</span></p>
-            <p>Forget password? <span style={{ cursor: "pointer" }} className='text-primary' >Reset Your password</span></p>
+            <p>Forget password? <span onClick={handleResetPassword} style={{ cursor: "pointer" }} className='text-primary' >Reset Your password</span></p>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
