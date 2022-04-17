@@ -13,7 +13,7 @@ const Header = () => {
     }
 
     return (
-        <div>
+        <div className='mb-5 p-2'>
             <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark" className='mb-5'>
                 <Container>
                     <Navbar.Brand as={Link} to="/"> Dentist Sohel Rana</Navbar.Brand>

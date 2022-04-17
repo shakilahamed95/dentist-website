@@ -3,8 +3,9 @@ import { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap'
 import { Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import './Login.css'
 
 const Login = () => {
     const nevigate = useNavigate()
@@ -73,7 +74,7 @@ const Login = () => {
     }, [user]);
 
     return (
-        <div className='mx-auto container w-50 mt-5'>
+        <div className='mx-auto container w-50 mt-5 log-in'>
             <h1 className='text-center text-primary mt-5'>Please Login</h1>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
