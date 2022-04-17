@@ -9,6 +9,7 @@ import auth from '../../firebase.init';
 import './Login.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
     const nevigate = useNavigate()
@@ -98,6 +99,7 @@ const Login = () => {
             <p>New to My site? <span style={{ cursor: "pointer" }} onClick={nevigateRegister} className='text-primary'>Please Sign Up</span></p>
             <p>Forget password? <span onClick={handleResetPassword} style={{ cursor: "pointer" }} className='text-primary' >Reset Your password</span></p>
             <ToastContainer></ToastContainer>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
