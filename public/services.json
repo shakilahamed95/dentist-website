@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Root Canal Therapy",
+        "price": "500",
+        "description": "1.Repairs and saves a damaged or infected tooth 2.Prevents the need for extraction and dental implants 3.Corrects one of the underlying causes of bad breath 4.Efficient and cost-effective",
+        "img": "https://artisandentalmadison.com/wp-content/uploads/sites/157/2020/09/shutterstock_1342756040-2-1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Teeth Bonding",
+        "price": "1200",
+        "description": " 1.Prevents the need for extraction and dental implants 2.Corrects one of the underlying causes of bad breath 3.Changes the shape and/or length of  the teeth 4.Efficient and cost-effective",
+        "img": "https://oceanbreezeprosthodontics.com/wp-content/uploads/2019/08/Porcelain-Crowns-Teeth-Bonding-Delray-Beach.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Implant Dentistry",
+        "price": "2300",
+        "description": " 1.Corrects problems with chewing  and digestion 2.Preserves facial structure to keep you looking young 3.Changes the shape and/or length of  the teeth easily 4. Long term solution for tooth or teeth loss ",
+        "img": "https://forestbrookdental.com/wp-content/uploads/sites/15/2019/07/Webp.net-resizeimage-7-2-1.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Full mouth reconstruction",
+        "price": "5000",
+        "description": "This comprehensive restorative procedure can reverse years of neglect and the natural effects of aging. It can also provide you with the Extreme Hollywood Smile that you have always dreamed of having. A custom approach is developed just for your needs and goals. Full mouth restoration are on the optimal integration of a number of the restorative techniques.",
+        "img": "https://www.implantandperiodonticspecialists.com/wp-content/uploads/2020/03/How-Long-Does-Full-Mouth-Reconstruction-Take.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Teeth in 1 Day",
+        "price": "2700",
+        "description": "At Cunning Dental Group, we offer Teeth in 1 Day for patients that are looking for a convenient way to replace their missing teeth. If you live in Southern California and have experienced tooth loss, we encourage you to visit one of our 3 locations in Montclair, Irvine and San Diego to see if you are a candidate for this life changing procedure.",
+        "img": "https://www.360dentalcare.co.uk/wp-content/uploads/2017/07/3.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Smile Makeover",
+        "price": "3500",
+        "description": "A smile makeover combines cosmetic dentistry procedures to simultaneously address multiple structural and cosmetic dental imperfections. Tooth discoloration, misalignment, and fractures are some common concurrent imperfections that can make your smile appear prematurely aged or unhealthy. By sharing your unique concerns. ",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVHCNY3OOvbhzdVlxFxCM0oxo5aaXOxM-_zDuaVT3jOfF20X9EWVCcohyAeGf8zl-J1Ac&usqp=CAU"
+    }
+]
