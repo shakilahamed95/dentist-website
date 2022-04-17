@@ -1,7 +1,6 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
@@ -21,7 +20,7 @@ const SignUp = () => {
         password: "",
         general: "",
     });
-   
+
 
     const handleEmailChange = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
@@ -76,12 +75,12 @@ const SignUp = () => {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control onChange={handleEmailChange} type="email" name="email" id="" placeholder='Please enter your email' required />
-                    {errors?.email && <p className="error-message">{errors.email}</p>}
+                    <p>  {errors?.email}</p>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control onChange={handlePasswordChange} type="password" name='password' id='' placeholder="Password" required />
-                    {errors?.password && <p className="error-message">{errors.password}</p>}
+                    <p> {errors?.password}</p>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control onChange={handleConfirmPasswordChange} type="password" name='confirm-password' id='' placeholder=" Confirm Password" required />
