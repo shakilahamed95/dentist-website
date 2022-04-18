@@ -4,6 +4,8 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './SignUp.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
     const [agree, setAgree] = useState(false)
@@ -71,6 +73,7 @@ const SignUp = () => {
     const handleFormSubmit = event => {
         event.preventDefault();
         createUserWithEmailAndPassword(userInfo.email, userInfo.password)
+        toast("Check your email and verify your email address")
     }
     return (
         <div className='mx-auto container w-50 mt-5 sign-up'>
@@ -100,7 +103,7 @@ const SignUp = () => {
                 </Button>
             </Form>
             <p>Already Have An Account? <span style={{ cursor: "pointer" }} className='text-primary' onClick={nevigateLogin}>Please Login</span></p>
-
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
