@@ -1,0 +1,17 @@
+.my-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-img img {
+    height: 400px;
+    width: 450px;
+    border-radius: 50%;
+}
+
+.goal-description {
+
+    border-radius: 10px;
+    padding: 10px;
+}

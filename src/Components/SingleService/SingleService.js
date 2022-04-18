@@ -17,7 +17,7 @@ const SingleService = ({ service }) => {
                     <h5 className="card-title">{name}</h5>
                     <p>Service Charge TK:{price}</p>
                     <p className="card-text">{description}</p>
-                    <p className="card-text"><button onClick={handleCheckout} type="button" class="btn btn-primary">Book Service</button></p>
+                    <p className="card-text"><button onClick={handleCheckout} type="button" className="btn btn-primary">Book Service</button></p>
                 </div>
             </div>
         </div>

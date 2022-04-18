@@ -1,6 +1,6 @@
-import { createUserWithEmailAndPassword, getAuth, sendEmailVerification } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './SignUp.css'
@@ -21,6 +21,9 @@ const SignUp = () => {
         password: "",
         general: "",
     });
+
+    const [createUserWithEmailAndPassword, user, loading, hookError] =
+        useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const handleEmailChange = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
@@ -56,12 +59,18 @@ const SignUp = () => {
             setUserInfo({ ...userInfo, confirmPass: "" });
         }
     };
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
+    useEffect(() => {
+        if (user) {
+            navigate(from);
+        }
+    }, [user]);
     const handleFormSubmit = event => {
         event.preventDefault();
-        createUserWithEmailAndPassword(auth, userInfo.email, userInfo.password)
-        sendEmailVerification(auth.currentUser)
-            .then(() => { })
+        createUserWithEmailAndPassword(userInfo.email, userInfo.password)
     }
     return (
         <div className='mx-auto container w-50 mt-5 sign-up'>
