@@ -84,12 +84,12 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control onChange={handleEmailClick} type="email" placeholder="Enter email" required />
                 </Form.Group>
-                {errors?.email && <p>{errors.email}</p>}
+                {errors?.email && <p className='text-danger'>{errors.email}</p>}
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control onChange={handlePasswordClick} type="password" placeholder="Password" required />
                 </Form.Group>
-                <p> {errors?.password}</p>
-                <p>{hookError?.message}</p>
+                <p className='text-danger'> {errors?.password}</p>
+                <p className='text-danger'>{hookError?.message}</p>
                 <Button variant="primary w-50 d-block mx-auto mb-4" type="submit">
                     Login
                 </Button>

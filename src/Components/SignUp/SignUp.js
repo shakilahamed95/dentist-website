@@ -84,12 +84,12 @@ const SignUp = () => {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control onChange={handleEmailChange} type="email" name="email" id="" placeholder='Please enter your email' required />
-                    <p>  {errors?.email}</p>
+                    <p className='text-danger'>  {errors?.email}</p>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control onChange={handlePasswordChange} type="password" name='password' id='' placeholder="Password" required />
-                    <p> {errors?.password}</p>
+                    <p className='text-danger'> {errors?.password}</p>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control onChange={handleConfirmPasswordChange} type="password" name='confirm-password' id='' placeholder=" Confirm Password" required />

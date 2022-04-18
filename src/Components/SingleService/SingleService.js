@@ -11,7 +11,7 @@ const SingleService = ({ service }) => {
     }
     return (
         <div>
-            <div className="card">
+            <div className="card shadow-lg">
                 <img src={img} className="card-img-top service-img" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
