@@ -22,7 +22,7 @@ const SignUp = () => {
         general: "",
     });
 
-    const [createUserWithEmailAndPassword, user, loading, hookError] =
+    const [createUserWithEmailAndPassword, user] =
         useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const handleEmailChange = (e) => {
